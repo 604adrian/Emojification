@@ -9,9 +9,9 @@ const emojibet: { [key: string]: Array<string> } = {
   'g': ['🇬'],
   'h': ['🇭'],
   'i': ['🇮', 'ℹ️ ', '👁️'],
-  'j': ['🇯'],
+  'j': ['🇯', '🏑'],
   'k': ['🇰'],
-  'l': ['🇱'],
+  'l': ['🇱', '🏒'],
   'm': ['🇲','Ⓜ️'],
   'n': ['🇳'],
   'o': ['🇴','🅾️', '⭕', '🍩'],
@@ -25,9 +25,10 @@ const emojibet: { [key: string]: Array<string> } = {
   'w': ['🇼'],
   'x': ['🇽','✖️', '❎','❌','𝕏'],
   'y': ['🇾'],
-  'z': ['🇿'],
+  'z': ['🇿', '💤'],
   '?': ['?', '❔', '❓'],
   '!': ['!', '❕', '❗', '‼️'],
+  '0': ['🅾️'],
   '1': ['1️⃣'],
   '2': ['2️⃣'],
   '3': ['3️⃣'],
@@ -53,4 +54,4 @@ const emojibet: { [key: string]: Array<string> } = {
 const alphabet: Array<string> = Object.keys(emojibet)
 const alphaValues: Array<Array<string>> = Object.values(emojibet)
 
-module.exports = { emojibet, alphabet, alphaValues } 
+module.exports = { emojibet, alphabet, alphaValues, } 

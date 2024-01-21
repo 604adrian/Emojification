@@ -12,8 +12,9 @@ const funk = (char: string) => {
   let isItIn = alphabet.indexOf(char)
   if (isItFunky === -1) { return false } 
   else {
-    let funkyRandom = Math.floor((Math.random() * alphaValues[isItIn].length-1) + 1)
-    return alphaValues[isItIn][funkyRandom]
+    const funkArr: Array<string> = alphaValues[isItIn]
+    let funkyRandom = Math.floor((Math.random() * funkArr.slice(1).length) + 1)
+    return funkArr[funkyRandom]
   }
 }
 
