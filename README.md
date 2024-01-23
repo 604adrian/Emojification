@@ -5,14 +5,13 @@ Emojify is a module to turn strings of text into strings of emoji.
 * [Quotations](#Quotations)
 # Install
 To install Emojify, first download the package:
-
-> npm install emojify
+> npm install emojification 
 
 # Usage
 Once you've installed Emojify, you can use it in your projects to quickly convert between text and emoji. Here is a basic example:
 
 ```javascript
-const toEmoji = require('emojify')
+const toEmoji = require('emojification')
 
 const textInput = 'Hello World!'
 const emojiOutput = toEmoji(textInput, false)
