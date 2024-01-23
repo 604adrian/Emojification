@@ -11,8 +11,10 @@ Once you've installed Emojify, you can use it in your projects to quickly conver
 
 ```javascript
 const toEmoji = require('emojification')
-
 const textInput = 'Hello World!'
+
+// toEmoji() has two parameters
+// The 1st parameter requires a string. The 2nd is a boolean value
 const emojiOutput = toEmoji(textInput, false)
 
 console.log(emojiOutput)
@@ -22,6 +24,8 @@ The output should look like this:
 
 <pre>🇭 🇪 🇱 🇱 🇴,  🇼 🇴 🇷 🇱 🇩!</pre>
 
+The first parameter specifies the string to translate into emoji-form. The second parameter specifies the mode by which this is done: if a falsy value is given then the translation will occur in Boring Mode, and if a truthy value is given then the translation will occur in Funky Mode (see [Modes](#Modes) for more information). The first parameter is required, but the second parameter is optional and will default to a falsy value if not specified.
+
 Take note of the background colour of your terminal. In some terminals (e.g. iTerm) emojis may blend into the terminals background colour, depending on how dark it is. This can make the emojis difficult to see. So, if you are a die-hard console.logger using a dark terminal theme, consider colouring the relevant emoji-output using ascii-escape codes, [chalk](https://www.npmjs.com/package/chalk), or a similar tool. 
 
 # Modes 
@@ -29,7 +33,6 @@ Emojis are plentiful, so sometimes there are multiple emojis corresponding to a 
 
 Before getting into the differences between these two modes, it is worth noting a point of similarity between them: both Boring and Funky mode translate the digits 0-9 in the same way and in a uniform fashion. For example:
 ```javascript
-// The first parameter of toEmoji() must always be a string
 const numberExample = toEmoji('0123456789') 
 
 console.log(numberExample)
@@ -71,7 +74,7 @@ Boring Mode does not use translate punctuation marks into emoji-form.
 ## Funky Mode
 What Funky Mode lacks in terms of predictability and reproducibility, it makes up for in funk. In Funky Mode, when the input string contains a letter with more than one corresponding emoji, any one of these potential suitors will be chosen at random. For example, the letter 'X' has a number of different emojis to its name: there are '🇽','✖️', '𝕏', '❌', or '❎'. So there is more than one right way to translate the text-string 'X' to an emoji-string. Funky Mode deals with this ambiguity by picking any suitable X emoji at random (except for the RIS emoji) and using that emoji for the translation process. If a letter has only one suitable emoji (its RIS emoji) then Funky Mode will just go with that one. Funky Mode uses emojis for punctuation.
 
-To use Funky Mode, simply turn on all the relevant funky. This can be done by passing a truthy value as the second parameter of the toEmoji function. Here's an example:
+To use Funky Mode, simply turn on all the relevant funk. This can be done by passing a truthy value as the second parameter of the toEmoji function. Here's an example:
 
 ```javascript
 const funkyModeExample = toEmoji("Hello - for a 3rd time!", true)
