@@ -6,7 +6,6 @@ Emojify is a module to turn strings of text into strings of emoji.
 # Install
 To install Emojify, first download the package:
 > npm install emojification 
-
 # Usage
 Once you've installed Emojify, you can use it in your projects to quickly convert between text and emoji. Here is a basic example:
 
@@ -37,7 +36,7 @@ console.log(numberExample)
 ```
 The above code should print the following string in your console:
 
-> 🅾️ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣
+<pre>🅾️ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣</pre>
 
 This should hold true regardless of whether one is using Boring Mode or Funky Mode.
 
@@ -144,4 +143,8 @@ const noWildcard2 = toEmoji('\*  \*  \*  \*  \*')
 console.log(noWildcard2) // Prints "*  *  *  *  *" to the console
 ```
 
-Note that the wildcards in backslash-quotes are more spaced-out. This is because their surrounding whitespace is not quoted (see above).
+Note that the wildcards in backslash-quotes are more spaced-out. This is because their surrounding whitespace is not quoted (see above).  
+
+---
+
+And there you have it. That is how you use Emojification. Use with caution and keep emojing.
