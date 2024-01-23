@@ -126,7 +126,7 @@ console.log(singleCharQuotes) // Prints "x x" to the console
 
 // Here, there is no backslash, so the 'x' is emojified
 const noQuotes = toEmoji('x x', true)
-console.log(noQuotes) // Prints "❎ ❌" to the console
+console.log(noQuotes) // Prints "❎  ❌" to the console
 ```
 
 Both tildes and backslashes can be used to inhibit wildcard functionality:
