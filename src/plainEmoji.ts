@@ -5,9 +5,9 @@ const plainEmojify = (char: string, nonEmojiArr: Array<any>) => {
   let isItIn: number = alphabet.indexOf(char)
   return isItIn !== -1
     ? alphaValues[isItIn][0]
-    : char === ' ' 
-      ? char+char
-      : char
+    : char === ' '
+      ? char
+      : char+char
 }
 
 module.exports = plainEmojify

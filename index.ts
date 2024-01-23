@@ -5,10 +5,11 @@ const plainEmojify = require('./src/plainEmoji')
 const toEmoji: Function = (nonEmoji: string, funky=false) => {
 
   const emojified: Array<string> = []
-  const nonEmojiArr: Array<any> = nonEmoji.split('')
+  const nonEmojiArr: Array<string> = nonEmoji.split('')
 
   const quoteChar: string = '~'
   const escapeSingleChar: string = '\\'
+
 
   // Check the character's pontential funk
   const emojiSorter = (char: string) => {
@@ -25,6 +26,13 @@ const toEmoji: Function = (nonEmoji: string, funky=false) => {
     return false
   }
 
+  const specialSpacing = (char: string, index: number, arrToTranslate: Array<string>) => {
+    const spacingChars: Array<string> = ['.', ',', '-', ';', '!', '?', '*']
+    if (funk && spacingChars.indexOf(char) === -1) { return false }
+    else if (!funk && (spacingChars.indexOf(char) === -1 || char === ' ')) { return false }
+    return true
+  }
+
   var quoted: boolean = false
 
   const translateArr = (arrToTranslate: Array<string>) => {
@@ -33,13 +41,14 @@ const toEmoji: Function = (nonEmoji: string, funky=false) => {
       const special = isItSpecial(char)
       const escaped = isItSpecial(arrToTranslate[i-1])
       const doesItFunk = funk(char)
+      const noExtraSpacing = specialSpacing(c, i, arrToTranslate)
       
       if (c === quoteChar) { 
 	if (quoted) { quoted = false }
 	else { quoted = true }
       }
 
-      if (escaped && c !== quoteChar) { emojified.push(char); return }
+      if (escaped && c !== quoteChar) { emojified.push(c); return }
       else if (special) { return }
       else if (quoted) { emojified.push(c); return }
       else if (funky) {
@@ -50,7 +59,7 @@ const toEmoji: Function = (nonEmoji: string, funky=false) => {
 	else { emojiSorter(char) }
       }
 
-      emojified.push(' ')
+      if (!noExtraSpacing) { emojified.push(' ') }
     })
   }
 
