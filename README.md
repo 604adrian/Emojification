@@ -68,7 +68,7 @@ In both of the above examples, the resulting output will look like this:
 
 <pre>🇭 🇪 🇱 🇱 🇴   🇦 🇬 🇦 🇮 🇳,   🇼 🇴 🇷 🇱 🇩</pre>
 
-Boring Mode does not use translate puncuation marks into emoji-form. 
+Boring Mode does not use translate punctuation marks into emoji-form. 
 
 ## Funky Mode
 What Funky Mode lacks in terms of predictability and reproducibility, it makes up for in funk. In Funky Mode, when the input string contains a letter with more than one corresponding emoji, any one of these potential suitors will be chosen at random. For example, the letter 'X' has a number of different emojis to its name: there are '🇽','✖️', '𝕏', '❌', or '❎'. So there is more than one right way to translate the text-string 'X' to an emoji-string. Funky Mode deals with this ambiguity by picking any suitable X emoji at random (except for the RIS emoji) and using that emoji for the translation process. If a letter has only one suitable emoji (its RIS emoji) then Funky Mode will just go with that one. Funky Mode uses emojis for punctuation.
@@ -90,7 +90,7 @@ As we can see, this string is much funkier, albeit slightly less legible.
 Unlike Boring Mode, Funky Mode translates certain punctuation marks (i.e. '!', '?', and '-') into emoji-form.
 
 # Wildcards
-Emojify has a 'wildcard' option. Whenever a user uses a '\*' symbol is used in a string, a random emoji will be chosen from an extensive array of emojis, handpicked to maximize comedic value.
+Emojify has a 'wildcard' option. Whenever a user uses a '\*' symbol is used in a string, a random emoji will be chosen from an extensive array of emojis, handpicked to maximise comedic value.
 
 For example, let's take take the string "Hello World \*". Running this string through Emojify 3 times might give this output:
 
