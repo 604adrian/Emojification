@@ -117,7 +117,7 @@ This would produce the following output:
 
 <pre>🇶 🇺 🇴 🇹 🇪 🇸? They work like this. 🇳 🇴 🇼   🇾 🇴 🇺   🇰 🇳 🇴 🇼.</pre>
 
-Note that, in some circumstances, it may be necessary to quote the whitespaces that exist before and after the quoted text. This is because certain combinations of RIS emojis can, when placed side-by-side, encode a compound emoji. (For example, when run together '🇪 🇸' encode '🇪🇸'). To prevent unintentionally encoding for these compound emojis, Emojify automatically inserts a whitespace between any-two given emojis. This can lead to inconsistent spacing before and after a quotation if the relevant whitespace is not also quoted.
+Note that, in some circumstances, it may be necessary to quote the whitespaces that exist before and after the quoted text. This is because certain combinations of RIS emojis can, when placed side-by-side, encode a compound emoji. (For example, when run together '🇪 🇸' encodes '🇪🇸'). To prevent unintentionally encoding for these compound emojis, Emojify automatically inserts a whitespace between any-two given emojis. This can lead to inconsistent spacing before and after a quotation if the relevant whitespace is not also quoted.
 
 If one wishes to only prevent a single character from being emojified, this can be done using the backslash. Here is an example:
 ```javascript
