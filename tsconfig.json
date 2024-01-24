@@ -105,6 +105,18 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    /*
+    "outDir": "dist",
+    "lib": ["es2016"],
+    "sourceMap": true
+    */
+    }//,
+    /*
+    "include": [
+      "src/*.ts",
+      "index.ts"
+    ]
+    */
   }
 }

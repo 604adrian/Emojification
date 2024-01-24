@@ -1,6 +1,6 @@
 {
   "name": "emojification",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A tool for translating text-strings into emoji-strings",
   "keywords": [
     "strings",
@@ -16,24 +16,28 @@
     "emojification",
     "emojing"
   ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "main": "index.js",
   "author": "Adrian Jones",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.11.5"
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "undici-types": "^5.26.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/604adrian/Emojify.git"
   },
   "bugs": {
-    "url": "https://github.com/604adrian/Emojify/issues"
+    "url": "https://github.com/604adrian/Emojification"
   },
-  "homepage": "https://github.com/604adrian/Emojify#readme"
+  "homepage": "https://github.com/604adrian/Emojification#README.md"
 }

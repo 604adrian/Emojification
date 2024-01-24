@@ -1,13 +1,13 @@
-Emojify is a module to turn strings of text into strings of emoji.
+Emojification is a module to turn strings of text into strings of emoji.
 # Highlights
 * [Modes](#Modes)
 * [Wildcards](#Wildcards)
 * [Quotations](#Quotations)
 # Install
-To install Emojify, first download the package:
+To install Emojification, first download the package:
 > npm install emojification 
 # Usage
-Once you've installed Emojify, you can use it in your projects to quickly convert between text and emoji. Here is a basic example:
+Once you've installed Emojification, you can use it in your projects to quickly convert between text and emoji. Here is a basic example:
 
 ```javascript
 const toEmoji = require('emojification')
@@ -26,6 +26,9 @@ The output should look like this:
 
 The first parameter specifies the string to translate into emoji-form. The second parameter specifies the mode by which this is done: if a falsy value is given then the translation will occur in Boring Mode, and if a truthy value is given then the translation will occur in Funky Mode (see [Modes](#Modes) for more information). The first parameter is required, but the second parameter is optional and will default to a falsy value if not specified.
 
+**A note for web deveopers**: In at least some browsers, certain HTML tags will change the spacing of the emoji-string, eroding the whitespace between words. For example the `<p></p>`, `<h1></h1>` etc.) may display `toEmoji('Hello World')` as `🇭 🇪 🇱 🇱 🇴 🇼 🇴 🇷 🇱 🇩`. To avoid this, wrapping the emojis in a `<pre></pre>` tag is recommended, since this will preserve the original spacing of the emoji-strings.
+
+**A note for node.js developers**:
 Take note of the background colour of your terminal. In some terminals (e.g. iTerm) emojis may blend into the terminals background colour, depending on how dark it is. This can make the emojis difficult to see. So, if you are a die-hard console.logger using a dark terminal theme, consider colouring the relevant emoji-output using ascii-escape codes, [chalk](https://www.npmjs.com/package/chalk), or a similar tool. 
 
 # Modes 
@@ -91,9 +94,9 @@ As we can see, this string is much funkier, albeit slightly less legible.
 Unlike Boring Mode, Funky Mode translates certain punctuation marks (i.e. '!', '?', and '-') into emoji-form.
 
 # Wildcards
-Emojify has a 'wildcard' option. Whenever a user uses a '\*' symbol is used in a string, a random emoji will be chosen from an extensive array of emojis, handpicked to maximise comedic value.
+Emojification, has a 'wildcard' option. Whenever a user uses a '\*' symbol is used in a string, a random emoji will be chosen from an extensive array of emojis, handpicked to maximise comedic value.
 
-For example, let's take take the string "Hello World \*". Running this string through Emojify 3 times might give this output:
+For example, let's take take the string "Hello World \*". Running this string through Emojification 3 times might give this output:
 
 <pre>🇭 🇪 🇱 🇱 🇴,  🇼 🇴 🇷 🇱 🇩  😎</pre>
 
@@ -118,7 +121,7 @@ This would produce the following output:
 
 <pre>🇶 🇺 🇴 🇹 🇪 🇸? They work like this. 🇳 🇴 🇼   🇾 🇴 🇺   🇰 🇳 🇴 🇼.</pre>
 
-Note that, in some circumstances, it may be necessary to quote the whitespaces that exist before and after the quoted text. This is because certain combinations of RIS emojis can, when placed side-by-side, encode a compound emoji. (For example, when run together '🇪 🇸' encodes '🇪🇸'). To prevent unintentionally encoding for these compound emojis, Emojify automatically inserts a whitespace between any-two given emojis. This can lead to inconsistent spacing before and after a quotation if the relevant whitespace is not also quoted.
+Note that, in some circumstances, it may be necessary to quote the whitespaces that exist before and after the quoted text. This is because certain combinations of RIS emojis can, when placed side-by-side, encode a compound emoji. (For example, when run together '🇪 🇸' encodes '🇪🇸'). To prevent unintentionally encoding for these compound emojis, Emojification automatically inserts a whitespace between any-two given emojis. This can lead to inconsistent spacing before and after a quotation if the relevant whitespace is not also quoted.
 
 If one wishes to only prevent a single character from being emojified, this can be done using the backslash. Here is an example:
 ```javascript

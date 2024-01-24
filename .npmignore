@@ -1,0 +1,6 @@
+*.ts
+.gitignore
+.DS_Store
+test.js
+blah.js
+tsconfig.json
