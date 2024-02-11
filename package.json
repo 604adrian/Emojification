@@ -1,6 +1,6 @@
 {
   "name": "emojification",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A tool for translating text-strings into emoji-strings",
   "keywords": [
     "strings",
@@ -30,6 +30,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@tsparticles/slim": "^3.1.0",
     "undici-types": "^5.26.5"
   },
   "repository": {

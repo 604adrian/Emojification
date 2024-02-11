@@ -64,7 +64,7 @@ const toEmoji: Function = (nonEmoji: string, funky=false) => {
   }
 
   translateArr(nonEmojiArr)
-
+  
   return emojified.join('').trim()
 }
 
