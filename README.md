@@ -1,4 +1,4 @@
-Emojification is a module to turn strings of text into strings of emoji. See it in action with this demo: https://604adrian.github.io/emojify-on-the-web/
+Emojification is a module to turn strings of text into strings of emoji. To see how it works, check out this example website: https://604adrian.github.io/emojify-on-the-web/
 # Highlights
 * [Modes](#Modes)
 * [Wildcards](#Wildcards)
@@ -6,6 +6,9 @@ Emojification is a module to turn strings of text into strings of emoji. See it 
 # Install
 To install Emojification, first download the package:
 <pre>npm install emojification</pre>
+Once you've installed it, you can start playing around with it almost immediately like so:
+<pre>npm run basic-cli</pre>
+This should prompt you for text input, and then produce corresponding emoji output, giving you a feeling for how the Emojification process works.
 
 # Usage
 Once you've installed Emojification, you can use it in your projects to quickly convert between text and emoji. Here is a basic example:
@@ -30,7 +33,7 @@ The first parameter specifies the string to translate into emoji-form. The secon
 **A note for web deveopers**: In at least some browsers, certain HTML tags will change the spacing of the emoji-string, eroding the whitespace between words. For example the `<p></p>`, `<h1></h1>` etc.) may display `toEmoji('Hello World')` as `🇭 🇪 🇱 🇱 🇴 🇼 🇴 🇷 🇱 🇩`. To avoid this, wrapping the emojis in a `<pre></pre>` tag is recommended, since this will preserve the original spacing of the emoji-strings.
 
 **A note for node.js developers**:
-Take note of the background colour of your terminal. In some terminals (e.g. iTerm) emojis may blend into the terminals background colour, depending on how dark it is. This can make the emojis difficult to see. So, if you are a die-hard console.logger using a dark terminal theme, colouring the relevant emoji-output using ascii-escape codes seems to work. [Chalk](https://www.npmjs.com/package/chalk) or a similar tools should also get the job done.
+Take note of the background colour of your terminal. In some terminals (e.g. iTerm) emojis may blend into the terminals background colour, depending on how dark it is. This can make the emojis difficult to see. So, if you are a die-hard console.logger using a dark terminal theme, consider highlighting the relevant emoji-output using ascii-escape codes, [chalk](https://www.npmjs.com/package/chalk) or a similar tool.
 
 # Modes 
 Emojis are plentiful, so sometimes there are multiple emojis corresponding to a single letter of the alphabet. Faced with so many great options, it can be difficult to know which emoji to use. To solve this conundrum, emojify comes with two modifiers, or modes: Boring Mode and Funky Mode.
@@ -154,7 +157,7 @@ console.log(noWildcard2) // Prints "*  *  *  *  *" to the console
 Note that the wildcards in backslash-quotes are more spaced-out. This is because their surrounding whitespace is not quoted (see above).
 
 # Licence
-For licensing information, see the [licence file](https://github.com/604adrian/Emojification?tab=MIT-1-ov-file).
+MIT. See the [licence file](https://github.com/604adrian/Emojification?tab=MIT-1-ov-file) for more information.
 
 ---
 

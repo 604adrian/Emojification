@@ -17,7 +17,7 @@
     "emojing"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "basic-cli": "node src/cli.js"
   },
   "main": "index.js",
   "author": "Adrian Jones",
@@ -30,7 +30,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@tsparticles/slim": "^3.1.0",
+    "chalk": "^4.1.2",
+    "readline": "^1.3.0",
     "undici-types": "^5.26.5"
   },
   "repository": {
@@ -40,5 +41,5 @@
   "bugs": {
     "url": "https://github.com/604adrian/Emojification"
   },
-  "homepage": "https://github.com/604adrian/Emojification#README.md"
+  "homepage": "https://github.com/604adrian/Emojification#README.md",
 }

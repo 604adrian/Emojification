@@ -64,8 +64,9 @@ const toEmoji: Function = (nonEmoji: string, funky=false) => {
   }
 
   translateArr(nonEmojiArr)
-  
-  return emojified.join('').trim()
+
+  // Whitespace padding to make the cli more legible
+  return " "+emojified.join(' ').trim()+" "
 }
 
 module.exports = toEmoji
