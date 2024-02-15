@@ -38,20 +38,6 @@ Take note of the background colour of your terminal. In some terminals (e.g. iTe
 # Modes 
 Emojis are plentiful, so sometimes there are multiple emojis corresponding to a single letter of the alphabet. Faced with so many great options, it can be difficult to know which emoji to use. To solve this conundrum, emojify comes with two modifiers, or modes: Boring Mode and Funky Mode.
 
-Before getting into the differences between these two modes, it is worth noting a point of similarity between them: both Boring and Funky mode translate the digits 0-9 in the same way and in a uniform fashion. For example:
-```javascript
-const numberExample = toEmoji('0123456789') 
-
-console.log(numberExample)
-```
-The above code should print the following string in your console:
-
-<pre>🅾️ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣</pre>
-
-This should hold true regardless of whether one is using Boring Mode or Funky Mode.
-
-With that out of the way, let's get to the differences between Boring Mode and Funky Mode.
-
 ## Boring Mode
 Boring mode provides a predictable and uniform way of emojing in style. With boring mode, every letter is converted into its corresponding Regional Indicator Symbol (RIS), and punctuation marks are left as is. This is because there is a RIS emoji for every letter in the Latin alphabet, so sticking solely to RIS emojis provides uniformity, reproducibility and predictability in your emoji outputs.
 
