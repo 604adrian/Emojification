@@ -1,6 +1,0 @@
-*.ts
-.gitignore
-.DS_Store
-blah.js
-tsconfig.json
-*.swp
